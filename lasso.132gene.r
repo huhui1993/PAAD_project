@@ -287,98 +287,8 @@ td.test<-data.final[,c("OS","OS.time",c(outResult$id))]
 tdmultiCox=coxph(Surv(OS.time, OS) ~ ., data = data.final.107) #这里有个“.”，代表分析td数据中所有变量（列名）
 write.table(summary(tdmultiCox)$coefficients,file="tdmultiCox.67gene.txt",sep="\t",row.names=T,quote=F)
 
-tdmultiCox=coxph(Surv(OS.time, OS) ~ NYAP1+CD36+IL20RB, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ PPP1R14D+ZNF488+TMEM213+ANLN+TTC6+MFSD2A+ANKRD22+GPR78, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ PPP1R14D+ZNF488+TMEM213+ANLN+TTC6+MFSD2A+ANKRD22+GPR78, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ PIK3R5+CHI3L2+CLEC12B+CXCL6+CELSR3+FOXD1+NR1D1+PTGES+RAB26+VSIG1, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CELSR3+IL20RB+PTGES+VSIG1, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ KCNB1+ECT2+MET, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CD36+CELSR3+IL20RB+PRKAR2B+VSIG1, data = data.final)
 
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CD36+CELSR3+IL20RB+VSIG1+GPR78+TTC6, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CD36+CELSR3+IL20RB+VSIG1, data = data.final)####final
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CELSR3+IL20RB+VSIG1, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CD36+CELSR3+IL20RB+VSIG1+PTGES, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ LCP1+NYAP1+ANLN+CD36+CELSR3+CHP2+ECT2+HOXA5+IL20RB+MUC16+VSIG1+PTGES, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CELSR3+IL20RB+VSIG1+PTGES, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ANLN+CD36+CELSR3+IL20RB+VSIG1, data = data.final)####final
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ECT2+MET, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ NT5E+NIM1K+FBXL16+ECT2+MET, data = data.final)#NIM1Kbubiaoda
-tdmultiCox=coxph(Surv(OS.time, OS) ~ NT5E+NIM1K+FBXL16+AGBL4+ECT2+MET, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ECT2+FBXL16+KCNB1+MET, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ASCL1+ATP1A3+DSCAM+GAD1+GSDMC+LDLRAD1+LRRC53+NPAS4+PNMA3+SLC25A47+AGER+ZNF114, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ASCL1+ATP1A3+DSCAM+GAD1+LRRC53+NPAS4+SLC25A47, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ATP1A3+LRRC53+NPAS4+SLC25A47, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ KCNB1+ECT2+MET, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ AGBL4+FBXL16+KCNB1, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ CHRNB2+DEPDC1+GBX1+MPPED1+SLC25A47+STXBP5L+UNC80+LRRC53+AMER2+BRINP1, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ GBX1+MPPED1+LRRC53+AMER2+BRINP1+STXBP5L+MYT1, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ AGBL4+FGF9+GPR6+NPAS4+ASIC4, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ AGBL4+MPPED1+SLC25A47+FGF9+DEPDC1+NPAS4+RAD54L+SOAT2+TRIM46+DSCAM, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ AGBL4+FBXL16+KCNB1+ECT2+MET, data = data.final)
-
-
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ AGBL4+ECT2+FBXL16+KCNB1+MET+NT5E, data = data.final)#试一试
-tdmultiCox=coxph(Surv(OS.time, OS) ~ GSDMC+LDLRAD1+GAD1+RAD54L, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ GSDMC+GAD1+RAD54L, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ASCL1+ATP1A3+DSCAM+KCNB1+NPAS4+SLC25A47, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ASCL1+ATP1A3+DSCAM+KCNB1+NPAS4, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ECT2+FBXL16+KCNB1+MET, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ BIRC5+DEPDC1+E2F1+FERMT1+RAD54L+SMOC1, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ BIRC5+DEPDC1+E2F1+FERMT1+RAD54L+SMOC1, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+E2F1+FERMT1+KIF2C+LAMC2+S100A2+TGM2, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+E2F1+FERMT1+KIF2C+S100A2+TGM2, data = data.final)#buxing
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+E2F1+FERMT1+KIF2C+LAMC2+TGM2, data = data.final)#和7基因一样
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+E2F1+FERMT1+KIF2C+LAMC2+S100A2, data = data.final)#和7个一样
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+E2F1+FERMT1+LAMC2+S100A2+TGM2, data = data.final)#和7个一样
-tdmultiCox=coxph(Surv(OS.time, OS) ~ E2F1+FERMT1+KIF2C+LAMC2+S100A2+TGM2, data = data.final)#不行
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+FERMT1+KIF2C+LAMC2+S100A2+TGM2, data = data.final)#可行final
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+E2F1+KIF2C+LAMC2+S100A2+TGM2, data = data.final)#不行
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+FERMT1+KIF2C+AGBL4+ECT2+KCNB1+MET, data = data.final)#无法验证
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ E2F1+FERMT1+LAMC2+S100A2+TGM2, data = data.final)
-tdmultiCox=coxph(Surv(OS.time, OS) ~ ASCL1+F2+FGF9, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ PCDH15+F2+PNMA3+DSCAM+SOAT2+GPR6, data = data.final)#无法验证
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+FERMT1+KIF2C+LAMC2+S100A2+TGM2, data = data.final)#可行final
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+BRINP1+FERMT1+MET+FOXA2+DYNC1I1+MUC16+FAM131C+AGER, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+BRINP1+AGER, data = data.final)#AUC:0.713
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+FERMT1, data = data.final)#AUC:0.730
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER, data = data.final)#AUC:0.711
-
-setwd("C:\\项目\\TCGA_PAAD")
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+DEPDC1, data = data.final)#AUC:0.717
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+RAD54L, data = data.final)#AUC:0.713
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+BIRC5, data = data.final)#AUC:0.707
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+MET, data = data.final)#AUC:0.750
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+DKK1, data = data.final)#AUC:0.711
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+FOXA2, data = data.final)#AUC:0.711
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+EPHA2, data = data.final)#AUC:0.726
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+DYNC1I1, data = data.final)#AUC:0.709
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+FOSL1, data = data.final)#AUC:0.701
 tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+MUC16, data = data.final)#AUC:0.701
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+L1CAM, data = data.final)#AUC:0.701
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+MUC16, data = data.final)#AUC:0.735 final.new
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1B+HES2+AGER+MUC16+DYNC1I1, data = data.final)
-
-tdmultiCox=coxph(Surv(OS.time, OS) ~ DEPDC1+FERMT1+KIF2C+LAMC2+S100A2+TGM2, data = data.final)#可行final
 
 ph_hypo_multi <- cox.zph(tdmultiCox)
 ph_hypo_multi
@@ -700,6 +610,3 @@ outResult=cbind(id=row.names(outResult),outResult)
 #ANLN    "ANLN"    "1.02163472432883"  "1.00790350888391"  "1.03555300755944" "0.00193365469433555"
 #PTGES   "PTGES"   "1.00124066850734"  "0.999413047347545" "1.00307163182792" "0.183479354200319"  
 #PRKAR2B "PRKAR2B" "0.999028260587396" "0.966817951761716" "1.03231168146355" "0.953635005332226"
-
-tf<-read.delim("Homo_sapiens_TF.txt",header=T,sep='\t')
-intersect(comm_deg,unique(tf$Symbol))
