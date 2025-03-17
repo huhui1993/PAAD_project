@@ -10,16 +10,11 @@ write.table(list1, file = "PAAD.haveRNA-Seq.sample.list.txt",sep = "\t",
 exp.tmp<-t(df)
 rownames(exp.tmp)<-list1[,1]
 
-#deg<-read.delim("C:\\项目\\TCGA_PAAD\\TCGA_Gtex\\Download_from_Gtex_database\\cancer2normal_DEG_final.xls",header=T,row.names = 1)
-key132gene<-read.delim("C:\\项目\\TCGA_PAAD\\GEO\\132keygene.txt",header=T,row.names = NULL)
-key358gene<-read.delim("C:\\项目\\TCGA_PAAD\\WGCNA\\immuneAndEMTgene_coexp_gene.358gene.txt",header=T,row.names = 1)
-key358gene<-read.delim("D:\\项目\\TCGA_PAAD\\WGCNA\\gene352.txt",header=T,row.names = NULL)#final
-#key358gene<-read.delim("C:\\项目\\TCGA_PAAD\\WGCNA\\immuneAndEMTgene_coexp_gene.233gene.txt",header=T,row.names = NULL)
+key358gene<-read.delim("C:\\项目\\TCGA_PAAD\\WGCNA\\immuneAndEMTgene_coexp_gene.230gene.txt",header=T,row.names = NULL)
 #key23gene<-read.delim("C:\\项目\\TCGA_PAAD\\23gene.list.txt",header=T,row.names = NULL)
 deg.exp<-exp.tmp[,key358gene$Symbol]
-#deg.exp<-exp.tmp[,key132gene$key132gene]
 
-sur<-read.delim("TCGA-PAAD_185sample_clinical.survival.haveRNA-Seq.txt",header=T,row.names = 1)
+sur<-read.delim("TCGA-PAAD_clinical.survival.haveRNA-Seq.txt",header=T,row.names = 1)
 sur.1<-sur[,c("submitter_id","OS","OS.time")]
 rownames(sur.1)<-sur.1$submitter_id
 sur.1[1:4,1:3]
