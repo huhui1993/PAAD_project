@@ -1,4 +1,4 @@
-setwd("D:/项目/TCGA_PAAD/GEO")
+setwd("./GEO")
 #相关R包载入：
 library(ggrisk)
 library(survival)
@@ -8,7 +8,7 @@ library(survminer)
 dt <- LIRI #LIRI来自日本的肝癌ICGC数据库，包含时间、事件和四个基因
 head(dt)
 
-load("D:\\项目\\TCGA_PAAD\\4gene.final.tdmultiCox.RData")
+load("4gene.final.tdmultiCox.RData")
 tdmultiCox
 #coef exp(coef)  se(coef)      z        p
 #DEPDC1B  0.049422  1.050663  0.013955  3.542 0.000398
@@ -27,7 +27,7 @@ fit
 ggrisk(fit)
 
 #颜色相关参数调整：
-pdf(file="风险得分三联图.pdf",4.5,5)
+pdf(file="Triple_plot_of_risk_scores.pdf",4.5,5)
 ggrisk(
   fit,
   cutoff.value = "median",
